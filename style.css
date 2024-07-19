@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('your-background-image-url.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.calculator, .history, .sip-calculator {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.calculator .input, .sip-form input {
+  width: 100%;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.calculator .buttons, .sip-form, .additional-buttons, .history .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calculator .button, .history button, .sip-form button, .additional-buttons button {
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.calculator .button.operator, .history button:hover, .sip-form button:hover, .additional-buttons button:hover {
+  background-color: #ff9500;
+}
+
+.calculator .button.equal {
+  background-color: #4cd964;
+}
+
+.calculator .button.clear {
+  background-color: #ff3b30;
+}
+
+.calculator .button:active, .history button:active, .sip-form button:active, .additional-buttons button:active {
+  transform: scale(0.98);
+}
+
+.sip-form {
+  gap: 15px;
+  grid-template-columns: 1fr;
+}
+
+.sip-results {
+  text-align: left;
+  color: white;
+}
+
+.sip-results h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.sip-results p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sip-results canvas {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.history-list ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-list li {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+.sip-form label {
+  font-size: 18px;
+  color: #ffcc00; /* Yellow color */
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Additional CSS for resizing History and SIP Calculator buttons */
+.history button, .sip-form button, .additional-buttons button {
+  padding: 10px; /* Decrease padding */
+  font-size: 18px; /* Adjust font size */
+}
+
+.additional-buttons .button {
+  margin-top: 10px; /* Add margin to avoid overlapping */
+}
+
+.colored-text {
+  color: #ff9500; /* Change this to the desired color */
+}

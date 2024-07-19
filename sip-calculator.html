@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SIP Calculator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+      <h1 class="text-center">SIP Calculator</h1>
+      <div class="sip-form">
+        <label for="monthly-investment" >Monthly Investment Amount:</label>
+        <input type="number" id="monthly-investment" required />
+        <label for="return-rate">Expected Annual Return Rate (%):</label>
+        <input type="number" id="return-rate" required />
+        <label for="investment-duration">Investment Duration (years):</label>
+        <input type="number" id="investment-duration" required />
+        <button class="button" onclick="calculateSIP()">Calculate</button>
+      </div>
+      <div class="sip-results">
+        <h2>Results</h2>
+        <p id="total-invested-amount"></p>
+        <p id="total-returns"></p>
+        <p id="total-amount"></p>
+        <canvas id="sipChart"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="sip-calculator.js"></script>
+</body>
+</html>
